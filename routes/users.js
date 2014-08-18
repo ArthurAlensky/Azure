@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 
 router.get('/userlist', function(req, res) {
     var db = req.db;
-    db.userlist.find().toArray(function(err, items){
+    db.collection("userlist").find().toArray(function(err, items){
         res.json(items);
     })
 });
